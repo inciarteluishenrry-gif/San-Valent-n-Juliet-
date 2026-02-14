@@ -102,13 +102,15 @@ button{
 }
 </style>
 </head>
-
-<body>
-
-<audio id="music">
+  <audio id="musica" autoplay loop>
   <source src="cuando.m4a" type="audio/mp4">
-<audio>
+</audio>
 
+<script>
+  document.addEventListener("click", function() {
+    document.getElementById("musica").play();
+  });
+</script>
 <div class="card">
   <h1>Juliet 💕</h1>
   <div id="countdown"></div>

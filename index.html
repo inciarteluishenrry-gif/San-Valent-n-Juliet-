@@ -142,6 +142,18 @@ noBtn.addEventListener("mouseover", function(){
 // Cuando dice Sí
 yesBtn.addEventListener("click", function(){
   photoContainer.style.display="flex";
+
+  const music = document.getElementById("music");
+  music.volume = 0;
+  music.play();
+
+  let fade = setInterval(function(){
+    if(music.volume < 1){
+      music.volume += 0.05;
+    } else {
+      clearInterval(fade);
+    }
+  }, 200);
 });
 
 // Corazones
